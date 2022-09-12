@@ -9,7 +9,7 @@ https://www.youtube.com/watch?v=_gWfFEuert8
 https://raw.githubusercontent.com/RodrigoMvs123/OpenStack-Tutorial-Operate-Your-Own-Private-Cloud/main/README.md
 
 ##
-
+https://github.com/RodrigoMvs123/OpenStack-Tutorial-Operate-Your-Own-Private-Cloud/blame/main/README.md
 
 ##
 
