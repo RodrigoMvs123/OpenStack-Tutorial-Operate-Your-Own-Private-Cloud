@@ -1,11 +1,8 @@
-```
 # OpenStack-Tutorial-Operate-Your-Own-Private-Cloud
 
 - https://www.youtube.com/watch?v=_gWfFEuert8
 - https://raw.githubusercontent.com/RodrigoMvs123/OpenStack-Tutorial-Operate-Your-Own-Private-Cloud/main/README.md
 - https://github.com/RodrigoMvs123/OpenStack-Tutorial-Operate-Your-Own-Private-Cloud/blame/main/README.md
-
----
 
 ## OpenStack Tutorial – Operate Your Own Private Cloud
 
@@ -16,8 +13,6 @@
 - https://www.openstack.org/
 - https://openmetal.io/
 - https://central.openmetal.io/clouds/start
-
----
 
 ## SSH Key Setup
 
@@ -37,21 +32,15 @@
     keystone_admin_password: ...
     [root@modest-galliform ~]#
 
----
-
 ## Open Stack Login
 
 - User Name: admin
 - Password: ...
 
----
-
 ## Create Project
 
 - Edit Quotas
 - Create User
-
----
 
 ## Glence
 
@@ -59,8 +48,6 @@
 
 - User Name: beau
 - Password: …..
-
----
 
 ## Create Image +
 
@@ -73,8 +60,6 @@
 - subnet ( private-subnet )
 - Network Address 192.168.0.1/24 Ip
 - Version IPv4
-
----
 
 ## Project Network Router
 
@@ -91,13 +76,9 @@
 - Private: 192.168.0.0/24
 - submit
 
----
-
 ## Project Network
 
 - Network Topology
-
----
 
 ## Project Network Security Groups
 
@@ -114,8 +95,6 @@
 - CIDR ( 173.231.217.21 ) Add
 - Security Groups
 
----
-
 ## Hardware Node / admin password
 
     [root@modest-galliform ~]# ssh-keygen -b 4096
@@ -124,11 +103,9 @@
     Overwrite (y/n) ?
     y
     Enter passphrase ( Empty for no passphrase ): 
-
+    
     [root@modest-galliform ~]# cat /root/ .ssh/id_rsa.pub 
     Public Key ( … ) // copy
-
----
 
 ## Project Compute Instances
 
@@ -150,13 +127,9 @@
 - Import Key Pair
 - Launch Instance
 
----
-
 ## Project Compute Instances
 
 - Instances
-
----
 
 ## IP
 
@@ -171,8 +144,6 @@
 - Port to be associated / select a port / Jumpstation 192.168.0.88
 - Associate - Mapped Fixed IP Address
 
----
-
 ## SSH Connection
 
     [root@modest-galliform ~]# ssh -i / root/.ssh/id_rsa centos@173.231.255.46
@@ -181,8 +152,6 @@
     Are you sure you want to continue connecting ( yes/no [fingerprint]) ? Yes
     Enter passphrase for key ' /root/ .ssh/id_rsa': ( … ) 
     [centos@jumpstation ~]$
-
----
 
 ## OpenStack Overview
 
@@ -193,7 +162,7 @@
 
     [centos@jumpstation ~]$ mkdir -p ~/.config/openstack
     [centos@jumpstation ~]$ vi ~/.config/openstack/clouds.yaml [New File]
-
+    
     clouds:
     openstack:
     auth:
@@ -205,7 +174,7 @@
     region_name: "iad3"
     interface: "public"
     identify_api_version:3 
-
+    
     [centos@jumpstation ~]$ vi ~/.config/openstack/clouds.yaml [New File] :wq
     [centos@jumpstation ~]$ vi Development-openrc.sh 
     "Development-openrc.sh" [New File]
@@ -226,8 +195,6 @@
     ( venv ) [centos@jumpstation ~]$ openstack server list 
     ( venv ) [centos@jumpstation ~]$ openstack server show jumpstation
 
----
-
 ## Ceph
 
 - https://ceph.io/en/
@@ -237,8 +204,6 @@
     [root@modest-galliform ~]# grep keystone _admin_password /etc/kolla/passwords.yml
     keystone_adim_password: ...
     [root@modest-galliform ~]#
-
----
 
 ## OpenStack Passport
 
@@ -256,5 +221,3 @@
     [root@modest-galliform ~]# ceph health detail
     [root@modest-galliform ~]# ceph osd pool ls
     [root@modest-galliform ~]# ceph osd pool images
-```
----
