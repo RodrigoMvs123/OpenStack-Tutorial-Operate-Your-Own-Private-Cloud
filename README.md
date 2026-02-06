@@ -257,3 +257,4 @@
     [root@modest-galliform ~]# ceph osd pool ls
     [root@modest-galliform ~]# ceph osd pool images
 ```
+---
